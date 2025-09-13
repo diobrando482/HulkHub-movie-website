@@ -1,0 +1,59 @@
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(90deg, #2b5876, #4e4376);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.footer-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  background: #ff6f61;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.footer-btn:hover {
+  transform: scale(1.1);
+  background: #ff3b2f;
+}
+
+/* Анимация фона */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 70%);
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
